@@ -135,12 +135,9 @@ ZMK_HOLD_TAP(smart_num, \
     flavor = "balanced"; \
     tapping-term-ms = <200>; \
     quick-tap-ms = <GLOBAL_QUICK_TAP_MS>; \
-    bindings = <&mo>, <&num_dance>; \
+    bindings = <&kp Q>, <&kp I>; \
 )
-ZMK_TAP_DANCE(num_dance, \
-    tapping-term-ms = <200>; \
-    bindings = <&num_word NUM>, <&sl NUM>; \  // reverse this for sticky-num on single tap
-)
+
 
 / {
   keymap {
