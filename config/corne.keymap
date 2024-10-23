@@ -53,7 +53,26 @@
 
 #define GLOBAL_QUICK_TAP_MS 175
 #define ESC_TAPPING_TERM 200  // Define ESC_TAPPING_TERM with a value of 200 milliseconds
+#define QUICK_TAP_MS 175
 
+
+    release-after-ms = <900>;  // release after 0.9s
+    quick-release;             // no double capitalization when rolling keys
+};
+
+&sl {  // sticky-layer config
+    ignore-modifiers;          // allow chording sticky mods & layers
+};
+
+&lt {  // layer-tap config
+    flavor = "balanced";
+    tapping-term-ms = <200>;
+    quick-tap-ms = <QUICK_TAP_MS>;
+};
+
+&leader {  // leader-key config
+    timeout-ms = <650>;
+};
 
 // ## configure behaviors
 &sk {
@@ -130,7 +149,6 @@ ZMK_BEHAVIOR(br_morph, mod_morph, \
 
 
 // tap: num-word | double-tap: sticky num-layer | hold: num-layer
-#define SMART_NUM &smart_num NUM 0
 ZMK_HOLD_TAP(smart_num, \
     flavor = "balanced"; \
     tapping-term-ms = <200>; \
