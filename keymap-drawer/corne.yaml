@@ -11,16 +11,16 @@ layers:
   - I
   - O
   - P
-  - {t: A, h: '$$mdi:apple-keyboard-shift$$'}
-  - {t: S, h: '$$mdi:apple-keyboard-control$$'}
-  - {t: D, h: '$$mdi:apple-keyboard-option$$'}
-  - {t: F, h: '$$mdi:apple-keyboard-command$$'}
+  - '&hml LSHFT A'
+  - '&hml LCTRL S'
+  - '&hml LALT D'
+  - '&hml LGUI F'
   - G
   - H
-  - {t: J, h: '$$mdi:apple-keyboard-command$$'}
-  - {t: K, h: '$$mdi:apple-keyboard-option$$'}
-  - {t: L, h: '$$mdi:apple-keyboard-control$$'}
-  - {t: '''', h: '$$mdi:apple-keyboard-shift$$'}
+  - '&hmr RGUI J'
+  - '&hmr RALT K'
+  - '&hmr RCTRL L'
+  - '&hmr RSHFT SQT'
   - Y
   - X
   - C
@@ -28,8 +28,8 @@ layers:
   - B
   - N
   - M
-  - {t: ',', s: ;}
-  - {t: ., s: ':'}
+  - '&cma_smi'
+  - '&dot_cln'
   - /
   - LEFT WIN
   - '&hml'
@@ -101,8 +101,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: '{', s: '['}
-  - {t: '}', s: ']'}
+  - '&bl_morph'
+  - '&br_morph'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
