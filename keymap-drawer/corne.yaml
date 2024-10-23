@@ -32,7 +32,7 @@ layers:
   - {t: ., s: ':'}
   - /
   - LEFT WIN
-  - '&hml'
+  - {t: ▽, type: trans}
   - $$mdi:keyboard-space$$
   - ⮐
   - {t: ▽, type: trans}
