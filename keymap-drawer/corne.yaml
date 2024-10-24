@@ -11,16 +11,16 @@ layers:
   - I
   - O
   - P
-  - {t: A, h: '$$mdi:apple-keyboard-command$$'}
-  - {t: S, h: '$$mdi:apple-keyboard-option$$'}
-  - {t: D, h: '$$mdi:apple-keyboard-control$$'}
-  - {t: F, h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: A, h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: S, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: D, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: F, h: '$$mdi:apple-keyboard-command$$'}
   - {t: G, h: number}
   - H
-  - {t: J, h: '$$mdi:apple-keyboard-shift$$'}
-  - {t: K, h: '$$mdi:apple-keyboard-control$$'}
-  - {t: L, h: '$$mdi:apple-keyboard-option$$'}
-  - Q
+  - {t: J, h: '$$mdi:apple-keyboard-command$$'}
+  - {t: K, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: L, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: ;, h: '$$mdi:apple-keyboard-shift$$'}
   - Y
   - X
   - C
@@ -28,8 +28,8 @@ layers:
   - B
   - N
   - M
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - .
+  - ','
   - /
   - LEFT WIN
   - {t: '$$mdi:keyboard-tab$$', h: symbol}
@@ -94,7 +94,7 @@ layers:
   - (
   - )
   - {t: ▽, type: trans}
-  - '`'
+  - ''''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -104,7 +104,7 @@ layers:
   - {t: '{', s: '['}
   - {t: '}', s: ']'}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - ''''
   - {t: ▽, type: trans}
   - {type: held}
   - {t: ▽, type: trans}
