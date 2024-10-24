@@ -21,18 +21,18 @@ layers:
   - {t: K, h: '$$mdi:apple-keyboard-option$$'}
   - {t: L, h: '$$mdi:apple-keyboard-control$$'}
   - {t: ;, h: '$$mdi:apple-keyboard-shift$$'}
-  - Y
+  - Z
   - X
   - C
   - V
   - B
   - N
   - M
-  - .
   - ','
+  - .
   - /
   - LEFT WIN
-  - {t: '$$mdi:keyboard-tab$$', h: symbol}
+  - {t: '$$mdi:keyboard-tab$$', h: functions}
   - $$mdi:keyboard-space$$
   - ⮐
   - {t: Esc, h: symbol}
@@ -106,10 +106,10 @@ layers:
   - {t: ▽, type: trans}
   - ''''
   - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {type: held}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   functions:
   - {t: ▽, type: trans}
@@ -143,7 +143,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
