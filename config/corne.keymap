@@ -1,234 +1,125 @@
-/* source key position labels */
-#include "zmk-helpers/key-labels/36.h"
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/outputs.h>
 
-/* map Zen's extra keys */
-#define X_LH  &kp LGUI      // thumb row, left
-#define X_RH  &smart_mouse  // thumb row, right
 
-/* activate bluetooth */
-#define CONFIG_WIRELESS
+#include "keys/36.h"
 
-/* source the main keymap */
-#include "base.keymap"
+// global
+#define QUICK_TAP_MS 175
 
-/* use 5-column layout for Zen */
-ZMK_APPLY_MATRIX_TRANSFORM(five_column_transform)
+// layers
+#define BASE 0
+#define NUM 1
+#define SYM 2
 
-/*#include <behaviors.dtsi>*/
-/*#include <dt-bindings/zmk/keys.h>*/
-/*#include <dt-bindings/zmk/bt.h>*/
-/*#include <dt-bindings/zmk/outputs.h>*/
-/**/
-/**/
-/*#include "zmk-helpers/helper.h"*/
-/*#include "keys/36.h"*/
-/**/
-/**/
-/*// redefined keycodes*/
-/*#define _LWIN_    &kp LEFT_WIN*/
-/*#define _RALT_    &kp RIGHT_ALT*/
-/*#define _SPC_     &kp SPACE*/
-/*#define _RET_     &kp RETURN */
-/**/
-/*#define _MO_NUM_ &mo NUMBER*/
-/**/
-/*#define OUTTOG   &out OUT_TOG // toggle keyboard output bluetooth/usb*/
-/*#define ___      &trans      //  transparent*/
-/*#define _x_      &none*/
-/**/
-/**/
-/*// sourced from urob/zmk-node-free*/
-/*#define ZMK_STRINGIFY(x) #x*/
-/*#define ZMK_BEHAVIOR_CORE_caps_word       compatible = "zmk,behavior-caps-word";       #binding-cells = <0>*/
-/*#define ZMK_BEHAVIOR_CORE_dynamic_macro   compatible = "zmk,behavior-dynamic-macro";   #binding-cells = <1>*/
-/*#define ZMK_BEHAVIOR_CORE_hold_tap        compatible = "zmk,behavior-hold-tap";        #binding-cells = <2>*/
-/*#define ZMK_BEHAVIOR_CORE_key_repeat      compatible = "zmk,behavior-key-repeat";      #binding-cells = <0>*/
-/*#define ZMK_BEHAVIOR_CORE_macro           compatible = "zmk,behavior-macro";           #binding-cells = <0>*/
-/*#define ZMK_BEHAVIOR_CORE_macro_one_param compatible = "zmk,behavior-macro-one-param"; #binding-cells = <1>*/
-/*#define ZMK_BEHAVIOR_CORE_macro_two_param compatible = "zmk,behavior-macro-two-param"; #binding-cells = <2>*/
-/*#define ZMK_BEHAVIOR_CORE_mod_morph       compatible = "zmk,behavior-mod-morph";       #binding-cells = <0>*/
-/*#define ZMK_BEHAVIOR_CORE_sticky_key      compatible = "zmk,behavior-sticky-key";      #binding-cells = <1>*/
-/*#define ZMK_BEHAVIOR_CORE_tap_dance       compatible = "zmk,behavior-tap-dance";       #binding-cells = <0>*/
-/*#define ZMK_BEHAVIOR_CORE_tri_state       compatible = "zmk,behavior-tri-state";       #binding-cells = <0>*/
-/**/
-/**/
-/*// layers*/
-/*#define BASE    0*/
-/*#define NUMBER  1*/
-/*#define SYMBOLS 2*/
-/**/
-/*#define ZMK_BEHAVIOR(name, type, ...) \*/
-/*  / { \*/
-/*    behaviors { \*/
-/*      name: name { \*/
-/*        ZMK_BEHAVIOR_CORE_ ## type; \*/
-/*        __VA_ARGS__ \*/
-/*      }; \*/
-/*    }; \*/
-/*  };*/
-/**/
-/*#define GLOBAL_QUICK_TAP_MS 175*/
-/*#define ESC_TAPPING_TERM 200  // Define ESC_TAPPING_TERM with a value of 200 milliseconds*/
-/*#define QUICK_TAP_MS 175*/
-/**/
-/**/
-/*    release-after-ms = <900>;  // release after 0.9s*/
-/*    quick-release;             // no double capitalization when rolling keys*/
-/*};*/
-/**/
-/*&sl {  // sticky-layer config*/
-/*    ignore-modifiers;          // allow chording sticky mods & layers*/
-/*};*/
-/**/
-/*&lt {  // layer-tap config*/
-/*    flavor = "balanced";*/
-/*    tapping-term-ms = <200>;*/
-/*    quick-tap-ms = <QUICK_TAP_MS>;*/
-/*};*/
-/**/
-/*&leader {  // leader-key config*/
-/*    timeout-ms = <650>;*/
-/*};*/
-/**/
-/*// ## configure behaviors*/
-/*&sk {*/
-/*  quick-release;*/
-/*};*/
-/**/
-/**/
-/*// ### timerless home row mods*/
-/*// see https://github.com/urob/zmk-config#timeless-homerow-mods*/
-/*#define MAKE_HRM(NAME, HOLD, TAP, TRIGGER_POS) \*/
-/*  ZMK_BEHAVIOR(NAME, hold_tap, \*/
-/*    flavor = "balanced"; \*/
-/*    tapping-term-ms = <280>; \*/
-/*    quick-tap-ms = <GLOBAL_QUICK_TAP_MS>; \*/
-/*    require-prior-idle-ms = <150>; \*/
-/*    bindings = <HOLD>, <TAP>; \*/
-/*    hold-trigger-key-positions = <TRIGGER_POS>; \*/
-/*    hold-trigger-on-release; \*/
-/*  )*/
-/**/
-/*#define ZMK_AUTO_LAYER(name, ...) ZMK_BEHAVIOR(name, auto_layer, __VA_ARGS__)*/
-/*#define ZMK_CAPS_WORD(name, ...) ZMK_BEHAVIOR(name, caps_word, __VA_ARGS__)*/
-/*#define ZMK_HOLD_TAP(name, ...) ZMK_BEHAVIOR(name, hold_tap, __VA_ARGS__)*/
-/*#define ZMK_KEY_REPEAT(name, ...) ZMK_BEHAVIOR(name, key_repeat, __VA_ARGS__)*/
-/*#if ZMK_HELPERS_KEEP_NATIVE != 1*/
-/*    #undef ZMK_MACRO*/
-/*    #define ZMK_MACRO(name, ...) ZMK_BEHAVIOR(name, macro, __VA_ARGS__)*/
-/*#endif*/
-/*#define ZMK_MACRO_ONE_PARAM(name, ...) ZMK_BEHAVIOR(name, macro_one_param, __VA_ARGS__)*/
-/*#define ZMK_MACRO_TWO_PARAM(name, ...) ZMK_BEHAVIOR(name, macro_two_param, __VA_ARGS__)*/
-/*#define ZMK_MOD_MORPH(name, ...) ZMK_BEHAVIOR(name, mod_morph, __VA_ARGS__)*/
-/*#define ZMK_STICKY_KEY(name, ...) ZMK_BEHAVIOR(name, sticky_key, __VA_ARGS__)*/
-/*#define ZMK_TAP_DANCE(name, ...) ZMK_BEHAVIOR(name, tap_dance, __VA_ARGS__)*/
-/*#define ZMK_TRI_STATE(name, ...) ZMK_BEHAVIOR(name, tri_state, __VA_ARGS__)*/
-/**/
-/*MAKE_HRM(hml, &kp, &kp, LEFT_KEYS THUMB_KEYS)    // left-hand HRMs*/
-/*MAKE_HRM(hmr, &kp, &kp, RIGHT_KEYS THUMB_KEYS)  // right-hand HRMs*/
-/**/
-/*// Home row mods*/
-/*#define HRML(k1, k2, k3, k4) &hml LSHFT k1 &hml LCTRL k2 &hml LALT  k3 &hml LGUI  k4*/
-/*#define HRMR(k1, k2, k3, k4) &hmr RGUI  k1 &hmr RALT  k2 &hmr RCTRL k3 &hmr RSHFT k4*/
-/**/
-/**/
-/**/
-/*// Tap for comma, shift + tap for semicolon*/
-/*ZMK_BEHAVIOR(cma_smi, mod_morph, \*/
-/*  bindings = <&kp COMMA>, <&kp SEMI>; \*/
-/*  mods = <(MOD_LSFT)>; \*/
-/*)*/
-/**/
-/*// Tap for period, shift + tap for colon*/
-/*ZMK_BEHAVIOR(dot_cln, mod_morph, \*/
-/*  bindings = <&kp DOT>, <&kp COLON>; \*/
-/*  mods = <(MOD_LSFT)>; \*/
-/*)*/
-/**/
-/**/
-/*// {, SHIFT [*/
-/*ZMK_BEHAVIOR(bl_morph, mod_morph, \*/
-/*  bindings = <&kp LEFT_BRACE>, <&kp LEFT_BRACKET>; \*/
-/*  mods = <(MOD_LSFT|MOD_RSFT)>; \*/
-/*)*/
-/**/
-/*ZMK_BEHAVIOR(br_morph, mod_morph, \*/
-/*  bindings = <&kp RIGHT_BRACE>, <&kp RIGHT_BRACKET>; \*/
-/*  mods = <(MOD_LSFT|MOD_RSFT)>; \*/
-/*)*/
-/**/
-/*/ {*/
-/*  chosen {*/
-/*    zmk,matrix_transform = &five_column_transform;*/
-/*  };*/
-/*};*/
-/**/
-/**/
-/*// tap: num-word | double-tap: sticky num-layer | hold: num-layer*/
-/*ZMK_HOLD_TAP(smart_num, \*/
-/*    flavor = "balanced"; \*/
-/*    tapping-term-ms = <200>; \*/
-/*    quick-tap-ms = <GLOBAL_QUICK_TAP_MS>; \*/
-/*    bindings = <&kp Q>, <&kp I>; \*/
-/*)*/
-/**/
-/**/
-/*/ {*/
-/*  keymap {*/
-/*    compatible = "zmk,keymap";*/
-/*    base_layer { */
-/*      bindings = <*/
-/*        // ╭───────────────────────────────────────────────────────────╮   ╭───────────────────────────────────────────────────────────╮*/
-/*        // │     Q     │     W     │     E     │    R      │     T     │   │     Y     │     U     │     I     │     O     │     P     │*/
-/*               &kp Q       &kp W       &kp E      &kp R        &kp T           &kp Y       &kp U       &kp I       &kp O       &kp P*/
-/*        // ├───────────┼───────────┼───────────┼───────────┼───────────┤   ├───────────┼───────────┼───────────┼───────────┼───────────┤*/
-/*        // │     A     │     S     │     D     │     F     │     G     │   │     H     │     J     │     K     │     L     │     '     │*/
-/*            HRML(A,          S,          D,          F)        &kp G           &kp H    HRMR(J,          K,          L,         SQT)*/
-/*        // ├───────────┼───────────┼───────────┼───────────┼───────────┤   ├───────────┼───────────┼───────────┼───────────┼───────────┤*/
-/*        // │     Z     │     X     │     C     │     V     │     B     │   │     N     │     M     │    ,/;    │    ./:    │     /     │*/
-/*               &kp Y       &kp X       &kp C       &kp V       &kp B           &kp N       &kp M     &cma_smi     &dot_cln     &kp FSLH*/
-/*        // ╰───────────┼───────────┼───────────┼───────────┼───────────╯   ╰───────────┼───────────┼───────────┼───────────┼───────────╯*/
-/*                                      _LWIN_       ___       &kp SPACE         _RET_        ___      _RALT_*/
-/*        //                         │                                   │   │                                   │*/
-/*        //                         ╰───────────────────────────────────╯   ╰───────────────────────────────────╯*/
-/*      >;*/
-/*    };*/
-/*    number_layer { */
-/*      bindings = <*/
-/*        // ╭───────────────────────────────────────────────────────────╮   ╭───────────────────────────────────────────────────────────╮*/
-/*        // │     _     │     _     │     _     │     _     │     _     │   │     _     │     _     │     _     │     _     │     _     │*/
-/*                ___         ___         ___         ___         ___             ___        &kp 7       &kp 8       &kp 9        ___*/
-/*        // ├───────────┼───────────┼───────────┼───────────┼───────────┤   ├───────────┼───────────┼───────────┼───────────┼───────────┤*/
-/*        // │     _     │     _     │     _     │     _     │     _     │   │     _     │     _     │     _     │     _     │     _     │*/
-/*                ___         ___         ___         ___         ___             ___        &kp 4       &kp 5       &kp 6        ___*/
-/*        // ├───────────┼───────────┼───────────┼───────────┼───────────┤   ├───────────┼───────────┼───────────┼───────────┼───────────┤*/
-/*        // │     _     │     _     │     _     │     _     │     _     │   │     _     │     _     │     _     │     _     │     _     │*/
-/*                ___         ___         ___         ___         ___            &kp 0       &kp 1       &kp 2       &kp 3        ___*/
-/*        // ╰───────────┼───────────┼───────────┼───────────┼───────────╯   ╰───────────┼───────────┼───────────┼───────────┼───────────╯*/
-/*                                        ___         ___         ___             ___         ___         ___ */
-/*        //                         │                                   │   │                                   │*/
-/*        //                         ╰───────────────────────────────────╯   ╰───────────────────────────────────╯*/
-/*      >;*/
-/*    };*/
-/*    symbol_layer { */
-/*      bindings = <*/
-/*        // ╭───────────────────────────────────────────────────────────╮   ╭───────────────────────────────────────────────────────────╮*/
-/*        // │     _     │     _     │     _     │     _     │     _     │   │     _     │     _     │     _     │     _     │     _     │*/
-/*                ___         ___         ___         ___         ___             ___         ___         ___         ___         ___*/
-/*        // ├───────────┼───────────┼───────────┼───────────┼───────────┤   ├───────────┼───────────┼───────────┼───────────┼───────────┤*/
-/*        // │     _     │     _     │     _     │     _     │     _     │   │     _     │     _     │     _     │     _     │     _     │*/
-/*                ___         ___         ___         ___         ___             ___         ___         ___         ___         ___*/
-/*        // ├───────────┼───────────┼───────────┼───────────┼───────────┤   ├───────────┼───────────┼───────────┼───────────┼───────────┤*/
-/*        // │     _     │     _     │     _     │     _     │     _     │   │     _     │ {, <S>[   │  {, <S>[  │     _     │     _     │*/
-/*                ___         ___         ___         ___         ___             ___      &bl_morph   &br_morph      ___         ___*/
-/*        // ╰───────────┼───────────┼───────────┼───────────┼───────────╯   ╰───────────┼───────────┼───────────┼───────────┼───────────╯*/
-/*                                        ___         ___         ___             ___         ___         ___ */
-/*        //                         │                                   │   │                                   │*/
-/*        //                         ╰───────────────────────────────────╯   ╰───────────────────────────────────╯*/
-/*      >;*/
-/*    };*/
-/*  };*/
-/*};*/
+// redefined keycodes
+#define _LWIN_    &kp LEFT_WIN
+#define _RALT_    &kp RIGHT_ALT
+#define _SPC_     &kp SPACE
+#define _RET_     &kp RETURN 
+
+#define _MO_NUM_ &mo NUMBER
+
+#define OUTTOG   &out OUT_TOG // toggle keyboard output bluetooth/usb
+#define ___      &trans      //  transparent
+#define _x_      &none
+
+
+
+
+
+/ {
+  chosen {
+    zmk,matrix_transform = &five_column_transform;
+  };
+};
+/ {
+  behaviors {
+    hm: homerow_mods {
+      compatible = "zmk,behavior-hold-tap";
+      flavor = "balanced";
+      tapping-term-ms = <280>;
+      quick-tap-ms = <QUICK_TAP_MS>; 
+      bindings = <&kp>, <&kp>;
+      // label = "HOMEROW_MODS";
+      #binding-cells = <2>;
+      // hold-trigger-key-positions = <TRIGGER_POS>;
+      hold-trigger-on-release;
+
+    };
+    lb: l_brace_shift_bracket {
+         compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LBRC>, <&kp LBKT>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    rb: r_brace_shift_bracket {
+         compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp RBRC>, <&kp RBKT>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+  };
+};
+
+/ {
+  keymap {
+    compatible = "zmk,keymap";
+    base_layer { 
+      bindings = <
+        // ╭───────────────────────────────────────────────────────────╮   ╭───────────────────────────────────────────────────────────╮
+        // │     Q     │     W     │     E     │    R      │     T     │   │     Y     │     U     │     I     │     O     │     P     │
+               &kp Q       &kp W       &kp E      &kp R        &kp T           &kp Y       &kp U       &kp I       &kp O       &kp P
+        // ├───────────┼───────────┼───────────┼───────────┼───────────┤   ├───────────┼───────────┼───────────┼───────────┼───────────┤
+        // │     A     │     S     │     D     │     F     │     G     │   │     H     │     J     │     K     │     L     │     '     │
+            &hm LGUI A  &hm LALT S  &hm LCTRL D &hm LSHIFT F  &lt NUM G   /**/  &kp H    &hm RSHIFT J    &hm RCTRL K &hm RALT L  &kp Q           
+        // ├───────────┼───────────┼───────────┼───────────┼───────────┤   ├───────────┼───────────┼───────────┼───────────┼───────────┤
+        // │     Z     │     X     │     C     │     V     │     B     │   │     N     │     M     │    ,/;    │    ./:    │     /     │
+               &kp Y       &kp X       &kp C       &kp V       &kp B           &kp N       &kp M     ___     ___     &kp FSLH
+        // ╰───────────┼───────────┼───────────┼───────────┼───────────╯   ╰───────────┼───────────┼───────────┼───────────┼───────────╯
+                                      _LWIN_       &kp Q       &kp SPACE         _RET_        ___      _RALT_
+        //                         │                                   │   │                                   │
+        //                         ╰───────────────────────────────────╯   ╰───────────────────────────────────╯
+      >;
+    };
+    number_layer { 
+      bindings = <
+        // ╭───────────────────────────────────────────────────────────╮   ╭───────────────────────────────────────────────────────────╮
+        // │     _     │     _     │     _     │     _     │     _     │   │     _     │     _     │     _     │     _     │     _     │
+                ___         ___         ___         ___         ___             ___        &kp 7       &kp 8       &kp 9        ___
+        // ├───────────┼───────────┼───────────┼───────────┼───────────┤   ├───────────┼───────────┼───────────┼───────────┼───────────┤
+        // │     _     │     _     │     _     │     _     │     _     │   │     _     │     _     │     _     │     _     │     _     │
+                ___         ___         ___         ___         ___             ___        &kp 4       &kp 5       &kp 6        ___
+        // ├───────────┼───────────┼───────────┼───────────┼───────────┤   ├───────────┼───────────┼───────────┼───────────┼───────────┤
+        // │     _     │     _     │     _     │     _     │     _     │   │     _     │     _     │     _     │     _     │     _     │
+                ___         ___         ___         ___         ___            &kp 0       &kp 1       &kp 2       &kp 3        ___
+        // ╰───────────┼───────────┼───────────┼───────────┼───────────╯   ╰───────────┼───────────┼───────────┼───────────┼───────────╯
+                                        ___         ___         ___             ___         ___         ___ 
+        //                         │                                   │   │                                   │
+        //                         ╰───────────────────────────────────╯   ╰───────────────────────────────────╯
+      >;
+    };
+    symbol_layer { 
+      bindings = <
+        // ╭───────────────────────────────────────────────────────────╮   ╭───────────────────────────────────────────────────────────╮
+        // │     _     │     _     │     _     │     _     │     _     │   │     _     │     _     │     _     │     _     │     _     │
+                ___         ___         ___         ___         ___             ___         ___         ___         ___         ___
+        // ├───────────┼───────────┼───────────┼───────────┼───────────┤   ├───────────┼───────────┼───────────┼───────────┼───────────┤
+        // │     _     │     _     │     _     │     _     │     _     │   │     _     │     _     │     _     │     _     │     _     │
+                ___         ___         ___         ___         ___             ___         &kp LPAR   &kp RPAR         ___         ___
+        // ├───────────┼───────────┼───────────┼───────────┼───────────┤   ├───────────┼───────────┼───────────┼───────────┼───────────┤
+        // │     _     │     _     │     _     │     _     │     _     │   │     _     │ {, <S>[   │  {, <S>[  │     _     │     _     │
+                ___         ___         ___         ___         ___             ___         &lb        &rb      ___         ___
+        // ╰───────────┼───────────┼───────────┼───────────┼───────────╯   ╰───────────┼───────────┼───────────┼───────────┼───────────╯
+                                        ___         ___         ___             ___         ___         ___ 
+        //                         │                                   │   │                                   │
+        //                         ╰───────────────────────────────────╯   ╰───────────────────────────────────╯
+      >;
+    };
+  };
+};
 
 //                                  Template for new layers all keys are transparent
 //      ╭───────────────────────────────────────────────────────────╮   ╭───────────────────────────────────────────────────────────╮
