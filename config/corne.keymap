@@ -78,7 +78,7 @@
             &hm LSHIFT A  &hm LCTRL S  &hm LALT D  &hm LGUI F  &lt NUM G      &kp H     &hm RGUI J   &hm RALT K    &hm RCTRL L   &hm RSHIFT SEMI           
         // ├───────────┼───────────┼───────────┼───────────┼───────────┤   ├───────────┼───────────┼───────────┼───────────┼───────────┤
         // │     Z     │     X     │     C     │     V     │     B     │   │     N     │     M     │    ,/;    │    ./:    │     /     │
-               &kp Y       &kp X       &kp C       &kp V       &kp B           &kp N       &kp M        &kp DOT     &kp COMMA      &kp FSLH
+               &kp Y       &kp X       &kp C       &kp V       &kp B           &kp N       &kp M     &kp COMMA     &kp DOT      &kp FSLH
         // ╰───────────┼───────────┼───────────┼───────────┼───────────╯   ╰───────────┼───────────┼───────────┼───────────┼───────────╯
                                       _LWIN_     &lt FN TAB      &kp SPACE      _RET_    &lt SYM ESC   _RALT_
         //                         │                                   │   │                                   │
