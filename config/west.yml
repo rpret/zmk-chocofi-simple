@@ -4,8 +4,7 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: m165437 
       url-base: https://github.com/M165437 
-    - name: urob
-      url-base: https://github.com/urob
+
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -14,14 +13,5 @@ manifest:
     - name: nice-view-gem 
       remote: m165437 
       revision: main 
-    - name: zmk-helpers
-      remote: urob
-      revision: main
-    - name: zmk-auto-layer
-      revision: main
-      path: modules/auto-layer
-    - name: zmk-tri-state
-      revision: main
-      path: modules/tri-state
   self:
     path: config
