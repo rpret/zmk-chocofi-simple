@@ -96,9 +96,9 @@ layers:
   - {t: ▽, type: trans}
   - ''''
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - AC CUT
+  - AC COPY
+  - AC PASTE
   - {t: ▽, type: trans}
   - '-'
   - {t: '{', s: '['}
