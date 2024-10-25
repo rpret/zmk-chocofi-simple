@@ -20,6 +20,9 @@
 #define _RALT_    &kp RIGHT_ALT
 #define _SPC_     &kp SPACE
 #define _RET_     &kp RETURN 
+#define _CUT_     &kp C_AC_CUT
+#define _PASTE_     &kp C_AC_PASTE
+#define _COPY_     &kp C_AC_COPY
 
 #define _MO_NUM_ &mo NUMBER
 
@@ -112,7 +115,7 @@
                 ___         ___         ___         ___         ___           &kp EQUAL   &kp LPAR   &kp RPAR         ___     &kp APOS
         // ├───────────┼───────────┼───────────┼───────────┼───────────┤   ├───────────┼───────────┼───────────┼───────────┼───────────┤
         // │     _     │     _     │     _     │     _     │     _     │   │     _     │ {, <S>[   │  {, <S>[  │     _     │     _     │
-                ___         ___         ___         ___         ___          &kp MINUS         &lb        &rb          ___    &kp APOS 
+                ___        _CUT_       _COPY_     _PASTE_        ___          &kp MINUS         &lb        &rb          ___    &kp APOS 
         // ╰───────────┼───────────┼───────────┼───────────┼───────────╯   ╰───────────┼───────────┼───────────┼───────────┼───────────╯
                                         ___         ___         ___             ___         ___         ___ 
         //                         │                                   │   │                                   │
