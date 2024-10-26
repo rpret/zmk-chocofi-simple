@@ -32,7 +32,7 @@ layers:
   - .
   - /
   - LEFT WIN
-  - {t: '$$mdi:keyboard-tab$$', h: functions}
+  - {t: '$$mdi:keyboard-tab$$', h: fn}
   - $$mdi:keyboard-space$$
   - ⮐
   - {t: Esc, h: symbol}
@@ -96,22 +96,59 @@ layers:
   - {t: ▽, type: trans}
   - ''''
   - {t: ▽, type: trans}
-  - AC CUT
-  - AC COPY
-  - AC PASTE
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - '-'
   - {t: '{', s: '['}
   - {t: '}', s: ']'}
   - {t: ▽, type: trans}
-  - ''''
+  - '`'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
   - {t: ▽, type: trans}
-  functions:
+  fn:
+  - {t: base, h: sticky}
+  - {t: '$$mdi:keyboard$$', s: '$$mdi:usb$$', type: sym_by_sym}
+  - {t: '$$mdi:keyboard$$', s: '$$mdi:bluetooth$$', type: sym_by_sym}
+  - ''
+  - {t: '$$mdi:bluetooth-settings$$', s: '$$mdi:close-thick$$', type: sym_sub_text}
+  - F10
+  - F7
+  - F8
+  - F9
+  - ''
+  - {t: base, h: sticky}
+  - {t: '$$mdi:keyboard$$', s: '$$mdi:usb$$', type: sym_by_sym}
+  - {t: '$$mdi:keyboard$$', s: '$$mdi:bluetooth$$', type: sym_by_sym}
+  - ''
+  - {t: '$$mdi:bluetooth-settings$$', s: '$$mdi:close-thick$$', type: sym_sub_text}
+  - F10
+  - F7
+  - F8
+  - F9
+  - ''
+  - {t: '$$mdi:flash$$', h: '$$mdi:new-box$$', s: '$$mdi:micro-sd$$', type: sym_by_sym}
+  - ''
+  - ''
+  - ''
+  - ''
+  - F12
+  - F1
+  - F2
+  - F3
+  - {t: '$$mdi:flash$$', h: '$$mdi:new-box$$', s: '$$mdi:micro-sd$$', type: sym_by_sym}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  navigation:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -133,6 +170,9 @@ layers:
   - $$mdi:arrow-right$$
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - AC CUT
+  - AC COPY
+  - AC PASTE
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -141,9 +181,6 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
