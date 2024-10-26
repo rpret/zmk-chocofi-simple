@@ -130,7 +130,7 @@
        &sl BASE     &out OUT_USB &out OUT_BLE _x_        &bt BT_CLR         &kp F10      &kp F7       &kp F8       &kp F9       _x_
         // ├───────────┼───────────┼───────────┼───────────┼───────────┤   ├───────────┼───────────┼───────────┼───────────┼───────────┤
         // │     _     │     _     │     _     │     _     │     _     │   │     _     │     _     │     _     │     _     │     _     │
-       &sl BASE     &out OUT_USB &out OUT_BLE _x_        &bt BT_CLR         &kp F10      &kp F7       &kp F8       &kp F9       _x_
+       &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4       &kp F11      &kp F4       &kp F5       &kp F6       &none
         // ├───────────┼───────────┼───────────┼───────────┼───────────┤   ├───────────┼───────────┼───────────┼───────────┼───────────┤
         // │     _     │     _     │     _     │     _     │     _     │   │     _     │ {, <S>[   │  {, <S>[  │     _     │     _     │
        &bootloader  _x_        _x_        _x_        _x_              &kp F12      &kp F1       &kp F2       &kp F3       &bootloader
