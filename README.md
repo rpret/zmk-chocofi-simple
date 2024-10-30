@@ -1,4 +1,4 @@
-![Build workflow](https://github.com/notaduck/zmk-config-chocofi/actions/workflows/build.yml/badge.svg)
+![Build workflow](https://github.com/notaduck/zmk-chocofi-config/actions/workflows/build.yml/badge.svg)
 
 # ZMK-config
 
