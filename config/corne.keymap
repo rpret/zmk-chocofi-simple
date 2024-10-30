@@ -54,16 +54,10 @@
       hold-trigger-on-release;
 
     };
-    lb: l_brace_shift_bracket {
+    SBD: S_BSPC_DEL {
          compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp LBRC>, <&kp LBKT>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-    };
-    rb: r_brace_shift_bracket {
-         compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp RBRC>, <&kp RBKT>;
+            bindings = <&kp BSPC>, <&kp DEL>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
     };
   };
@@ -84,7 +78,7 @@
         // │     Z     │     X     │     C     │     V     │     B     │   │     N     │     M     │    ,/;    │    ./:    │     /     │
                &kp Z       &kp X       &kp C       &kp V       &kp B           &kp N       &kp M     &kp COMMA     &kp DOT      &kp FSLH
         // ╰───────────┼───────────┼───────────┼───────────┼───────────╯   ╰───────────┼───────────┼───────────┼───────────┼───────────╯
-                                      _LWIN_     &lt NAV TAB      &kp SPACE      _RET_    &lt SYM ESC  _x_ 
+                                      _LWIN_     &lt NAV TAB      &kp SPACE      _RET_    &lt SYM ESC  &SBD 
         //                         │                                   │   │                                   │
         //                         ╰───────────────────────────────────╯   ╰───────────────────────────────────╯
       >;
@@ -110,13 +104,13 @@
       bindings = <
         // ╭───────────────────────────────────────────────────────────╮   ╭───────────────────────────────────────────────────────────╮
         // │     _     │     _     │     _     │     _     │     _     │   │     _     │     _     │     _     │     _     │     _     │
-              &kp EXCL     &kp AT     &kp HASH    &kp DLLR   &kp PRCNT       &kp CARET    &kp AMPS    &kp STAR    ___         &kp NUBS 
+              &kp EXCL     &kp AT     &kp HASH    &kp DLLR   &kp PRCNT       ___ &kp CARET    &kp AMPS    &kp STAR             &kp NUBS 
         // ├───────────┼───────────┼───────────┼───────────┼───────────┤   ├───────────┼───────────┼───────────┼───────────┼───────────┤
         // │     _     │     _     │     _     │     _     │     _     │   │     _     │     _     │     _     │     _     │     _     │
-                ___         ___         ___         ___         ___           &kp EQUAL   &kp LPAR   &kp RPAR         ___     &kp APOS
+                ___         ___         ___         ___         ___           ___ &kp EQUAL   &kp LPAR   &kp RPAR              &kp APOS
         // ├───────────┼───────────┼───────────┼───────────┼───────────┤   ├───────────┼───────────┼───────────┼───────────┼───────────┤
         // │     _     │     _     │     _     │     _     │     _     │   │     _     │ {, <S>[   │  {, <S>[  │     _     │     _     │
-                ___         ___         ___         ___         ___          &kp MINUS         &lb        &rb          ___    &kp GRAVE 
+                ___         ___         ___         ___         ___          ___ &kp MINUS    &kp LBKT     &kp RBKT              &kp GRAVE 
         // ╰───────────┼───────────┼───────────┼───────────┼───────────╯   ╰───────────┼───────────┼───────────┼───────────┼───────────╯
                                         ___         ___         ___             ___         ___         ___ 
         //                         │                                   │   │                                   │
