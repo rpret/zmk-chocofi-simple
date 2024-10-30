@@ -36,7 +36,7 @@ layers:
   - $$mdi:keyboard-space$$
   - ⮐
   - {t: Esc, h: symbol}
-  - ''
+  - {t: BSPC, s: DEL}
   number:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -80,11 +80,12 @@ layers:
   - '#'
   - $
   - '%'
+  - {t: ▽, type: trans}
   - ^
   - '&'
   - '*'
-  - {t: ▽, type: trans}
   - NUBS
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -93,17 +94,16 @@ layers:
   - '='
   - (
   - )
-  - {t: ▽, type: trans}
   - ''''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - '-'
-  - {t: '{', s: '['}
-  - {t: '}', s: ']'}
   - {t: ▽, type: trans}
+  - '-'
+  - '['
+  - ']'
   - '`'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
