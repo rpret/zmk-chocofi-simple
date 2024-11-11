@@ -47,7 +47,7 @@
         timeout-ms = <50>; // Adjust as needed
         bindings = <&kp BSPC>; // Action: Backspace
         key-positions = <6 7>;
-        layers = < 0 >;
+        layers = < BASE >;
       };
   };
   behaviors {
