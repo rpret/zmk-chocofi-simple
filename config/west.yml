@@ -15,7 +15,7 @@ manifest:
     - name: nice-view-gem 
       remote: m165437 
       revision: main 
-   - name: zmk-helpers
+    - name: zmk-helpers
       remote: urob
       revision: main
   self:
