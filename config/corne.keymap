@@ -21,9 +21,9 @@
 #define _RALT_    &kp RIGHT_ALT
 #define _SPC_     &kp SPACE
 #define _RET_     &kp RETURN 
-#define _CUT_     &kp C_CUT
-#define _PASTE_     &kp C_PASTE
-#define _COPY_     &kp C_COPY
+#define _CUT_     &kp K_CUT
+#define _PASTE_     &kp K_PASTE
+#define _COPY_     &kp K_COPY
 
 #define _MO_NUM_ &mo NUMBER
 
