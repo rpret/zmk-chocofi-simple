@@ -90,6 +90,11 @@ ZMK_BEHAVIOR(hmr, hold_tap,
             bindings = <&kp BSPC>, <&kp DEL>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
     };
+    oneshot_esc: oneshot {
+          compatible = "zmk,behavior-oneshot";
+          label = "OneShot ESC";
+          #binding-cells = <0>;
+      };
   };
 
 };
