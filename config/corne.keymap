@@ -95,6 +95,13 @@ ZMK_BEHAVIOR(hmr_s, hold_tap,
         key-positions = <6 7>;
         layers = < BASE >;
       };
+      jk_colon_combo {
+        timeout-ms = <50>; // Adjust as needed
+        bindings = <&kp COLON>; // Action: Backspace
+        key-positions = <16 17>;
+        layers = < BASE >;
+      };
+
   };
   behaviors {
     hm: homerow_mods {
