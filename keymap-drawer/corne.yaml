@@ -33,7 +33,7 @@ layers:
   - /
   - $$mdi:apple-keyboard-shift$$
   - {t: '$$mdi:keyboard-tab$$', h: navigation}
-  - {t: '$$mdi:apple-keyboard-shift$$', h: '$$mdi:keyboard-space$$'}
+  - {t: '$$mdi:keyboard-space$$', h: '$$mdi:apple-keyboard-shift$$'}
   - ⮐
   - {t: Esc, h: symbol}
   - {t: BSPC, s: DEL}
