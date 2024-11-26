@@ -146,7 +146,7 @@ ZMK_BEHAVIOR(hmr_s, hold_tap,
         // │     Z     │     X     │     C     │     V     │     B     │   │     N     │     M     │    ,/;    │    ./:    │     /     │
                &kp Z       &kp X       &kp C       &kp V       &kp B           &kp N       &kp M     &kp COMMA     &kp DOT      &kp FSLH
         // ╰───────────┼───────────┼───────────┼───────────┼───────────╯   ╰───────────┼───────────┼───────────┼───────────┼───────────╯
-                                     &kp LSHIFT  &lt NAV TAB   SPACE        _RET_    &lt SYM ESC    &SBD 
+                                     &kp LSHIFT  &lt NAV TAB  &kp SPACE         _RET_    &lt SYM ESC    &SBD 
         //                         │                                   │   │                                   │
         //                         ╰───────────────────────────────────╯   ╰───────────────────────────────────╯
       >;
