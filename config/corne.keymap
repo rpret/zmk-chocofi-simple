@@ -54,7 +54,7 @@ ZMK_BEHAVIOR(hmr, hold_tap,
     quick-tap-ms = <QUICK_TAP_MS>;
     require-prior-idle-ms = <PRIOR_IDLE_MS>;
     bindings = <&kp>, <&kp>;
-    hold-trigger-key-positions = <RIGHT_KEYS THUMB_KEYS>;
+    hold-trigger-key-positions = <_KEYS THUMB_KEYS>;
     hold-trigger-on-release;
 )
 
@@ -91,7 +91,7 @@ ZMK_BEHAVIOR(hmr_s, hold_tap,
       compatible = "zmk,combos";
       iu_backspace_combo {
         timeout-ms = <50>; // Adjust as needed
-        bindings = <&kp RSHIFT>; // Action: Backspace
+        bindings = <&kp BSPC>; // Action: Backspace
         key-positions = <16 17>;
         layers = < BASE >;
       };
