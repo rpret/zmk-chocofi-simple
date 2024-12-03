@@ -418,12 +418,12 @@ rect.held, rect.combo.held {
 <text x="0" y="-24" class="key shifted">DEL</text>
 </g>
 <g class="combo combopos-0">
-<rect rx="6" ry="6" x="546" y="18" width="28" height="26" class="combo"/>
-<text x="560" y="32" class="combo tap">BSPC</text>
+<rect rx="6" ry="6" x="546" y="74" width="28" height="26" class="combo"/>
+<use href="#mdi:apple-keyboard-shift" xlink:href="#mdi:apple-keyboard-shift" x="551" y="78" height="18" width="18.0" class="combo tap glyph mdi:apple-keyboard-shift"/>
 </g>
 <g class="combo combopos-1">
-<rect rx="6" ry="6" x="546" y="74" width="28" height="26" class="combo"/>
-<text x="560" y="88" class="combo tap">:</text>
+<rect rx="6" ry="6" x="154" y="74" width="28" height="26" class="combo"/>
+<use href="#mdi:apple-keyboard-shift" xlink:href="#mdi:apple-keyboard-shift" x="159" y="78" height="18" width="18.0" class="combo tap glyph mdi:apple-keyboard-shift"/>
 </g>
 </g>
 </g>

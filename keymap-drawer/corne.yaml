@@ -186,9 +186,9 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
 combos:
-- p: [6, 7]
-  k: BSPC
-  l: [base]
 - p: [16, 17]
-  k: ':'
+  k: $$mdi:apple-keyboard-shift$$
+  l: [base]
+- p: [12, 13]
+  k: $$mdi:apple-keyboard-shift$$
   l: [base]
