@@ -190,5 +190,5 @@ combos:
   k: ':'
   l: [base]
 - p: [12, 13]
-  k: $$mdi:apple-keyboard-shift$$
+  k: '&smart_shift'
   l: [base]
