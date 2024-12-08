@@ -35,6 +35,11 @@
 #define ___      &trans      //  transparent
 #define _x_      &none
 
+// tap: sticky-shift | shift + tap/ double-tap: caps-word | hold: shift
+ZMK_MOD_MORPH(smart_shft,
+    bindings = <&sk LSHFT>, <&caps_word>;
+    mods = <(MOD_LSFT)>;
+)
 
 /* left-hand HRMs */
 ZMK_BEHAVIOR(hml, hold_tap,
