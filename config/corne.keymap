@@ -36,7 +36,7 @@
 #define _x_      &none
 
 // tap: sticky-shift | shift + tap/ double-tap: caps-word | hold: shift
-ZMK_MOD_MORPH(smart_shft,
+ZMK_MOD_MORPH(smart_shift,
     bindings = <&sk LSHFT>, <&caps_word>;
     mods = <(MOD_LSFT)>;
 )
@@ -102,7 +102,7 @@ ZMK_BEHAVIOR(hmr_s, hold_tap,
       };
       jk_colon_combo {
         timeout-ms = <50>; // Adjust as needed
-        bindings = <&kp LSHIFT>; // Action: Backspace
+        bindings = <&kp smart_shift>; // Action: Backspace
         key-positions = <12 13>;
         layers = < BASE >;
       };
