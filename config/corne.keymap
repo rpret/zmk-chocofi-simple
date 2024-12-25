@@ -28,6 +28,7 @@
 #define _CUT_     &kp K_CUT
 #define _PASTE_     &kp K_PASTE
 #define _COPY_     &kp K_COPY
+#define HYPER LC(LS(LG(LALT)))
 
 #define _MO_NUM_ &mo NUMBER
 
@@ -151,7 +152,7 @@ ZMK_BEHAVIOR(hmr_s, hold_tap,
         // │     Z     │     X     │     C     │     V     │     B     │   │     N     │     M     │    ,/;    │    ./:    │     /     │
                &kp Z       &kp X       &kp C       &kp V       &kp B           &kp N       &kp M     &kp COMMA     &kp DOT      &kp FSLH
         // ╰───────────┼───────────┼───────────┼───────────┼───────────╯   ╰───────────┼───────────┼───────────┼───────────┼───────────╯
-                                     &kp LSHIFT  &lt NAV TAB  &kp SPACE         _RET_    &lt SYM ESC    &SBD 
+                                     &kp LSHIFT  &lt NAV TAB  &kp SPACE    &hmr HYPER _RET_    &lt SYM ESC    &SBD 
         //                         │                                   │   │                                   │
         //                         ╰───────────────────────────────────╯   ╰───────────────────────────────────╯
       >;
