@@ -28,7 +28,6 @@
 #define _CUT_     &kp K_CUT
 #define _PASTE_     &kp K_PASTE
 #define _COPY_     &kp K_COPY
-#define HYPER LC(LS(LG(LALT)))
 
 #define _MO_NUM_ &mo NUMBER
 
@@ -42,15 +41,6 @@ ZMK_MOD_MORPH(smart_shift,
     mods = <(MOD_LSFT)>;
 )
 
-ZMK_BEHAVIOR(hyper_ret, hold_tap,
-    flavor = "balanced";
-    tapping-term-ms = <200>;
-    quick-tap-ms = <QUICK_TAP_MS>;
-    require-prior-idle-ms = <PRIOR_IDLE_MS>;
-    bindings = <&kp HYPER>, <&kp RET>;
-    hold-trigger-key-positions = <RIGHT_KEYS THUMB_KEYS>;
-    hold-trigger-on-release;
-)
 
 /* left-hand HRMs */
 ZMK_BEHAVIOR(hml, hold_tap,
@@ -162,7 +152,7 @@ ZMK_BEHAVIOR(hmr_s, hold_tap,
         // │     Z     │     X     │     C     │     V     │     B     │   │     N     │     M     │    ,/;    │    ./:    │     /     │
                &kp Z       &kp X       &kp C       &kp V       &kp B           &kp N       &kp M     &kp COMMA     &kp DOT      &kp FSLH
         // ╰───────────┼───────────┼───────────┼───────────┼───────────╯   ╰───────────┼───────────┼───────────┼───────────┼───────────╯
-                                     &kp LSHIFT  &lt NAV TAB  &kp SPACE    &hyper_ret   &lt SYM ESC    &SBD 
+                                     &kp LSHIFT  &lt NAV TAB  &kp SPACE     &kp _RET_   &lt SYM ESC    &SBD 
         //                         │                                   │   │                                   │
         //                         ╰───────────────────────────────────╯   ╰───────────────────────────────────╯
       >;
