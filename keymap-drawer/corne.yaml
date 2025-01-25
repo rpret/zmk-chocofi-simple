@@ -31,11 +31,11 @@ layers:
   - ','
   - .
   - /
-  - $$mdi:apple-keyboard-shift$$
-  - {t: '$$mdi:keyboard-tab$$', h: navigation}
-  - $$mdi:keyboard-space$$
+  - Esc
+  - {t: '$$mdi:keyboard-space$$', h: navigation}
+  - $$mdi:keyboard-tab$$
   - ⮐
-  - {t: Esc, h: symbol}
+  - {t: BSPC, h: symbol}
   - {t: BSPC, s: DEL}
   number:
   - ''
